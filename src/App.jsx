@@ -20,6 +20,30 @@ export const App = () => {
     dispatch(refreshUser());
   }, [dispatch]);
 
-  // return (
-  // );
+return (
+    <SharedLayout>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route
+          path="/signup"
+          element={
+            <RestrictedRoute redirectTo="/tracker" component={<SignUpPage />} />
+          }
+        />
+        <Route
+          path="/signin"
+          element={
+            <RestrictedRoute redirectTo="/tracker" component={<SignInPage />} />
+          }
+        />
+        <Route
+          path="/tracker"
+          element={
+            <PrivateRoute redirectTo="/signin" component={<TrackerPage />} />
+          }
+        />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </SharedLayout>
+  );
 };
