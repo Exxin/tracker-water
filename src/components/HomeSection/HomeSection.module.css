@@ -1,0 +1,125 @@
+.welcomeSection {
+  border-radius: 30px;
+  background: var(--background);
+  padding: 118px 16px 67px 16px;
+  position: relative;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 111%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--main);
+  cursor: pointer;
+}
+
+.welcomeText {
+  font-size: 14px;
+  line-height: 129%;
+  letter-spacing: 0.06em;
+  margin-bottom: 16px;
+}
+
+.welcomeTitle {
+  color: var(--main);
+  font-size: 38px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+  margin-bottom: 32px;
+}
+
+.welcomeThumb {
+  display: flex;
+  gap: 10px;
+}
+
+.linkTracker {
+  padding: 14px 19px;
+  border-radius: 30px;
+  background: var(--accent);
+  color: var(--main);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 129%;
+  letter-spacing: -0.01em;
+  transition: background-color 150ms ease-in;
+}
+
+.linkTracker:hover,
+.linkTracker:active,
+.linkTracker:focus {
+  background: #87d28d;
+}
+
+.linkSignIn {
+  padding: 14px 28px;
+  color: var(--main);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 129%;
+  letter-spacing: -0.01em;
+  border-radius: 30px;
+  border: 1px solid var(--main);
+  transition: border 150ms ease-in, color 150ms ease-in;
+}
+
+.linkSignIn:hover,
+.linkSignIn:focus,
+.linkSignIn:active {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+@media (min-width: 768px) {
+  .welcomeSection {
+    padding: 106px 93px 64px 50px;
+  }
+
+  .logo {
+    font-size: 24px;
+    line-height: 100%;
+  }
+
+  .welcomeText {
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.06em;
+  }
+
+  .welcomeTitle {
+    font-size: 64px;
+    line-height: 109%;
+    letter-spacing: -0.01em;
+  }
+
+  .welcomeThumb {
+    gap: 16px;
+  }
+
+  .linkTracker {
+    padding: 18px 40px;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  .linkSignIn {
+    padding: 18px 40px;
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .welcomeSection {
+    padding: 188px 62px;
+    max-width: 672px;
+  }
+
+  .welcomeTitle {
+    font-size: 80px;
+    line-height: 95%;
+  }
+}

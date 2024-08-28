@@ -1,0 +1,223 @@
+.signUpContainer {
+  border-radius: 30px;
+  background-color: #f0eff4;
+  display: flex;
+  flex-direction: column;
+  padding: 170px 16px;
+  position: relative;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 111%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--main);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+  color: var(--main);
+  margin-bottom: 32px;
+  cursor: default;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.inputItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.label {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 129%;
+  letter-spacing: -0.01em;
+}
+
+.field {
+  border: 1px solid rgba(47, 47, 47, 0.2);
+  border-radius: 15px;
+  padding: 16px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 129%;
+  letter-spacing: -0.01em;
+  background-color: inherit;
+}
+
+.field::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 129%;
+  letter-spacing: -0.01em;
+  color: rgba(47, 47, 47, 0.6);
+}
+
+.toggleVisibility {
+  position: absolute;
+  right: 18px;
+  top: 42px;
+}
+
+.button {
+  border-radius: 30px;
+  padding: 16px 131px;
+  background-color: var(--accent);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 129%;
+  letter-spacing: -0.01em;
+  color: var(--main);
+  margin-bottom: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #87d28d;
+  cursor: pointer;
+}
+
+.redirect {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 129%;
+  letter-spacing: -0.01em;
+  color: rgba(47, 47, 47, 0.5);
+  text-align: center;
+}
+
+.redirectLink {
+  font-size: 14px;
+  line-height: 129%;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--main-text);
+}
+
+.redirectLink:active,
+.redirectLink:hover,
+.redirectLink:focus {
+  color: rgba(50, 63, 71, 0.4);
+}
+
+.errorField {
+  border: 1px solid #ef5050;
+  color: #ef5050;
+}
+
+.errorField::placeholder {
+  color: #ef5050;
+}
+
+.error {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.01em;
+  color: #ef5050;
+}
+
+@media screen and (max-width: 374px) {
+  .button {
+    padding: 16px 100px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .signUpContainer {
+    padding: 227px 134px;
+  }
+
+  .formContainer {
+    width: 436px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    font-size: 24px;
+    line-height: 100%;
+    margin-bottom: 171px;
+  }
+
+  .title {
+    font-size: 36px;
+    line-height: 106%;
+  }
+
+  .inputContainer {
+    gap: 20px;
+  }
+
+  .label {
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  .field {
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  .field::placeholder {
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  .toggleVisibility {
+    right: 18px;
+    top: 52px;
+  }
+
+  .button {
+    padding: 18px 191px;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  .redirect {
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  .redirectLink {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .signUpContainer {
+    padding: 0;
+    justify-content: center;
+    width: 672px;
+    height: 736px;
+  }
+
+  .logo {
+    font-size: 24px;
+    line-height: 100%;
+  }
+
+  .title {
+    font-size: 36px;
+    line-height: 106%;
+  }
+}

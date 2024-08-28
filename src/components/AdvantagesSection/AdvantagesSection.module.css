@@ -1,0 +1,185 @@
+.section {
+  background-image: url(../../img/welcomePageImg/mainImg-phone-2x.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 353px;
+  border-radius: 30px;
+  position: relative;
+}
+
+.customersBox {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  gap: 4px;
+  border-radius: 30px;
+  background: var(--main-white);
+  box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: 96px;
+  left: 16px;
+}
+
+.customersContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.firstContainer {
+  z-index: 3;
+}
+
+.secondContainer {
+  margin-left: -8px;
+  z-index: 2;
+}
+
+.thirdContainer {
+  z-index: 1;
+  margin-left: -8px;
+}
+
+.pictureImage {
+  border-radius: 50%;
+  width: 26px;
+  height: 28px;
+}
+
+.sectionsTextLeters {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 117%;
+  color: var(--main);
+}
+
+.span {
+  color: var(--accent);
+}
+
+.group {
+  position: absolute;
+  bottom: 32px;
+  right: 16px;
+}
+
+.groupList {
+  max-width: 168px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.groupListItem {
+  padding: 9px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+
+.groupListItem:nth-child(1) {
+  background: var(--main);
+  gap: 4px;
+}
+
+.groupListItem:nth-child(2) {
+  background: var(--accent);
+}
+
+.groupListItem:nth-child(3) {
+  background: var(--main-white);
+}
+
+.ellipse {
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent);
+}
+
+.groupListItemText {
+  color: var(--main-white);
+  font-weight: 700;
+  font-size: 8px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+}
+
+.groupListItemTextBlack {
+  color: var(--main);
+  font-weight: 700;
+  font-size: 8px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 768px) {
+  .section {
+    background-image: url(../../img/welcomePageImg/mainImg-tab-2x.jpg);
+    height: 446px;
+  }
+
+  .customersBox {
+    padding: 10px 20px;
+    gap: 4px;
+    border-radius: 30px;
+    left: 32px;
+  }
+
+  .secondContainer {
+    margin-left: -18px;
+  }
+
+  .thirdContainer {
+    margin-left: -18px;
+  }
+
+  .pictureImage {
+    width: 47px;
+    height: 47px;
+  }
+
+  .sectionsTextLeters {
+    font-size: 15px;
+    line-height: 149%;
+  }
+
+  .group {
+    right: 32px;
+  }
+
+  .groupList {
+    gap: 10px;
+    max-width: 242px;
+  }
+
+  .groupListItemText {
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+  }
+
+  .groupListItemTextBlack {
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section {
+    background-image: url(../../img/welcomePageImg/mainImg-tab-2x.jpg);
+    height: 736px;
+    width: 672px;
+  }
+
+  .customersBox {
+    bottom: 132px;
+  }
+
+  .group {
+    bottom: 64px;
+  }
+}
