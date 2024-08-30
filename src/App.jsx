@@ -1,49 +1,35 @@
-import { lazy, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-// import { refreshUser } from '../redux/auth/operations';
-// import { selectIsLoggedIn } from '../redux/auth/selectors';
-import 'modern-normalize';
-import { Route, Routes } from 'react-router-dom';
-// import SharedLayout from './components/SharedLayout';
-// import RestrictedRoute from './components/RestrictedRoute';
-// import PrivateRoute from './components/PrivateRoute';
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
-import 'modern-normalize';
-import { selectIsLoggedIn, selectIsRefreshing } from './redux/auth/selectors';
-import { refreshUser } from './redux/auth/operations';
+function App() {
+  const [count, setCount] = useState(0)
 
-export const App = () => {
-  const isRefreshing = useSelector(selectIsRefreshing);
-  const dispatch = useDispatch();
+  return (
+    <>
+      <div>
+        <a href="https://vitejs.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
+  )
+}
 
-  useEffect(() => {
-    dispatch(refreshUser());
-  }, [dispatch]);
-
-return (
-    <SharedLayout>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route
-          path="/signup"
-          element={
-            <RestrictedRoute redirectTo="/tracker" component={<SignUpPage />} />
-          }
-        />
-        <Route
-          path="/signin"
-          element={
-            <RestrictedRoute redirectTo="/tracker" component={<SignInPage />} />
-          }
-        />
-        <Route
-          path="/tracker"
-          element={
-            <PrivateRoute redirectTo="/signin" component={<TrackerPage />} />
-          }
-        />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-    </SharedLayout>
-  );
-};
+export default App
