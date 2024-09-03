@@ -1,0 +1,335 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #2f2f2f;
+  background-image: url("/src/assets/img/mobile/background_main_mobile@1x.png");
+  background-size: 320px 952px;
+  background-repeat: no-repeat;
+  background-position-y: -80px;
+}
+
+@media (min-resolution: 2dppx) {
+  body {
+    background-image: url("/src/assets/img/mobile/background_main_mobile@2x.png");
+    background-size: 320px 952px;
+    background-repeat: no-repeat;
+    background-position-y: -80px;
+  }
+}
+
+.pagetitle {
+  font-size: 28px;
+  text-align: left;
+  color: #2f2f2f;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 32px;
+}
+
+.pagesubtitle {
+  font-size: 24px;
+  text-align: left;
+  color: #2f2f2f;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.sectiontitle {
+  font-size: 18px;
+  text-align: left;
+  color: #2f2f2f;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 20px;
+}
+
+.welcomepage {
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.content {
+  text-align: center;
+}
+
+.waterconsumptiontracker {
+  margin-bottom: 35px;
+}
+
+.trackerbenefits {
+  text-align: left;
+  margin: 20px 0;
+}
+
+.trackerbenefitslist {
+  list-style: none;
+  padding: 0;
+}
+
+.trackerbenefitslistitem {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 10px;
+  line-height: 20px;
+}
+
+.benefiticon {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+.trybutton {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #407bff;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 400;
+  box-shadow: 0px 4px 8px rgba(64, 123, 255, 0.34);
+  width: 100%;
+  transition: background-color 0.3s;
+  line-height: 20px;
+}
+
+.trybutton:hover {
+  box-shadow: 0px 4px 8px rgba(64, 123, 255, 0.54);
+  background-color: #407bff;
+  color: #ffffff;
+}
+
+.trybutton:active {
+  box-shadow: none;
+  background-color: #407bff;
+  color: #ffffff;
+}
+
+.whydrinkwater {
+  text-align: left;
+  background-color: #ecf2ff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 14px rgba(64, 123, 255, 0.3);
+  padding: 15px 15px;
+  margin-bottom: 20px;
+}
+
+.whydrinkwaterlist {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.whydrinkwaterlistitem {
+  margin-bottom: 10px;
+  font-size: 16px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.whydrinkwaterlistitem::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #3399ff;
+  border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #2f2f2f;
+    background-image: url("/src/assets/img/tablet/background_main_page_tablet@1x.png");
+    padding: 42px 37px;
+    background-size: 768px 680px;
+    background-repeat: no-repeat;
+    background-position-y: -69px;
+  }
+  .pagetitle {
+    font-size: 36px;
+    text-align: left;
+    color: #2f2f2f;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 42px;
+  }
+
+  .pagesubtitle {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .sectiontitle {
+    font-size: 18px;
+    text-align: left;
+    color: #2f2f2f;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .welcomepage {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+  }
+
+  .trackerbenefitslist {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 95px;
+  }
+
+  .trackerbenefitslistitem {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+
+    margin: 0;
+  }
+
+  .trybutton {
+    font-size: 18px;
+    width: 300px;
+    max-width: 100%;
+    margin-bottom: 10px;
+    line-height: 24px;
+  }
+
+  .whydrinkwater {
+    padding: 20px 25px;
+    margin-bottom: 0px;
+  }
+}
+
+@media (min-width: 768px) and (min-resolution: 2dppx) {
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #2f2f2f;
+    background-image: url("/src/assets/img/tablet/background_main_page_tablet@2x.png");
+    background-size: 768px 680px;
+    background-repeat: no-repeat;
+    background-position-y: -69px;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+    color: #2f2f2f;
+    background-image: url("/src/assets/img/desc/background_element_main_desc@1x.png"),
+      url("/src/assets/img/desc/background_main_desc@1x.png");
+    padding: 42px 37px;
+    background-repeat: no-repeat;
+    background-size: 1404px 482px, 1440px 432px;
+    background-position: right 19px top 83px, right 2px top 280px;
+  }
+
+  .content {
+    max-width: 400px;
+  }
+
+  .pagetitle {
+    font-size: 36px;
+    text-align: left;
+    color: #2f2f2f;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  .pagesubtitle {
+    font-size: 26px;
+  }
+
+  .sectiontitle {
+    font-size: 18px;
+    text-align: left;
+    color: #2f2f2f;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  .welcomepage {
+    padding: 89px 136px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .trackerbenefitslist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .trackerbenefitslistitem {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .trybutton {
+    font-size: 18px;
+    width: 350px;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .whydrinkwater {
+    padding: 20px 15px;
+  }
+
+  .whydrinkwaterlistitem {
+    line-height: 20px;
+  }
+}
+@media (min-width: 1440px) and (min-resolution: 2dppx) {
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+    color: #2f2f2f;
+    background-image: url("/src/assets/img/desc/background_element_main_desc@2x.png"),
+      url("/src/assets/img/desc/background_main_desc@2x.png");
+    padding: 42px 37px;
+    background-repeat: no-repeat;
+    background-size: 1404px 482px, 1440px 432px;
+    background-position: right 19px top 83px, right 2px top 280px;
+  }
+}
