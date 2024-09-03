@@ -1,0 +1,119 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/Gilroy/Gilroy-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/Gilroy/Gilroy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/Poppins/Poppins-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/Poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --main-text: #2f2f2f;
+  --main: #323f47;
+  --accent: #9be1a0;
+  --background: #f0eff4;
+  --main-white: #ffffff;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Poppins', sans-serif;
+  color: var(--main-text);
+}
+
+.gilroy-bold {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: bold;
+}
+
+.gilroy-regular {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: normal;
+}
+
+.poppins-bold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.poppins-regular {
+  font-family: 'Poppins', sans-serif;
+  font-weight: normal;
+}
+
+/* styles reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+div.os-scrollbar.os-scrollbar-track-interactive .os-scrollbar-track, div.os-scrollbar.os-scrollbar-handle-interactive .os-scrollbar-handle {
+  border-radius: 9px;
+  background-color: #323f47;
+  min-height: 8px;
+  max-height: 8px;
+}
+div.os-theme-dark, div.os-theme-light {
+    --os-size: 8px;
+    --os-padding-perpendicular: 0;
+    --os-padding-axis: 0;
+    background-color:  #fff;
+  border-radius: 9px;
+  min-height: 8px;
+  max-height: 8px;
+}
