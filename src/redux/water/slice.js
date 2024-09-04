@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {
   getWaterByMonth,
-  getWaterPerDay,
   getTodayWater,
   postWater,
   deleteWater,
@@ -20,7 +19,6 @@ const handleRejected = (state, action) => {
 const waterSlice = createSlice({
   name: "water",
   initialState: {
-    daily: [],
     monthly: [],
     todayWater: [],
     isLoading: false,
@@ -36,13 +34,7 @@ const waterSlice = createSlice({
         state.isError = false;
       })
       .addCase(getWaterByMonth.rejected, handleRejected)
-      .addCase(getWaterPerDay.pending, handlePending)
-      .addCase(getWaterPerDay.fulfilled, (state, action) => {
-        state.daily = action.payload;
-        state.isLoading = false;
-        state.isError = false;
-      })
-      .addCase(getWaterPerDay.rejected, handleRejected)
+
       .addCase(getTodayWater.pending, handlePending)
       .addCase(getTodayWater.fulfilled, (state, action) => {
         state.todayWater = action.payload;
@@ -50,14 +42,14 @@ const waterSlice = createSlice({
         state.isError = false;
       })
       .addCase(getTodayWater.rejected, handleRejected)
+
       .addCase(postWater.pending, handlePending)
       .addCase(postWater.fulfilled, (state, action) => {
-        state.daily.push(action.payload);
         state.todayWater.push(action.payload);
-        state.monthly.push(action.payload);
         state.isLoading = false;
       })
-      .addCase(getTodayWater.rejected, handleRejected)
+      .addCase(postWater.rejected, handleRejected)
+
       .addCase(deleteWater.pending, handlePending)
       .addCase(deleteWater.fulfilled, (state, action) => {
         state.isLoading = false;
@@ -66,6 +58,7 @@ const waterSlice = createSlice({
         });
       })
       .addCase(deleteWater.rejected, handleRejected)
+
       .addCase(patchWater.pending, handlePending)
       .addCase(patchWater.fulfilled, (state, action) => {
         state.isLoading = false;
@@ -80,3 +73,41 @@ const waterSlice = createSlice({
   },
 });
 export default waterSlice.reducer;
+
+/*
+Какой фукнционал есть в приложении в разделе работы с водой?
+- Сегодня
+1. Добавить воду, но не более 5л за день (с указанием времени)
+2. Так же слева есть измерение нормы за текущий день в процентах
+3. удалить запись дня
+- Месяц
+1. Календарь, в котором отображается все дни месяца с указанием нормы выпитой воды в процентах
+2. Если норма не выполнена - день отображается с обводкой
+3. при наведении на выбранный день, есть попап с информацией про выпитую воду в этот день(дата, норма, количество выпитых доз и процент от дневной нормы)
+
+waterData = {
+today: Array[{
+  waterAmount: number,
+  date: string
+}]
+
+month: Array[{
+  dailyNorma: number, // amount of liters per day
+  fulfillNorma: number, // percent of daily norma
+  date: string,
+  waterServings: number // amont of water glasses
+}]
+  
+
+}
+
+
+
+
+
+
+
+
+
+
+*/
